@@ -37,124 +37,169 @@ HAVING condition;
 ```
 
 **Question 1**
---
--- Paste Question 1 here
 
-```sql
--- Paste your SQL code below for Question 1
+![image](https://github.com/user-attachments/assets/82b3c373-ca16-40de-9583-bc0dadc20865)
+
+
+```
+
+SELECT DoctorID, COUNT(RecordID) AS TotalRecords FROM MedicalRecords GROUP BY DoctorID;
+
 ```
 
 **Output:**
 
-![Output1](output.png)
+![image](https://github.com/user-attachments/assets/ba70b2b6-613d-405e-8f33-84b85dc16a7d)
+
 
 **Question 2**
----
--- Paste Question 2 here
 
-```sql
--- Paste your SQL code below for Question 2
+![image](https://github.com/user-attachments/assets/32b83332-198f-45c0-aa49-690f113925b1)
+
+```
+SELECT InsuranceCompany, SUM(DATE('now')>SUBSTR(ValidityPeriod,15)) AS TotalExpiredPatients 
+FROM Insurance GROUP BY InsuranceCompany;
+
 ```
 
 **Output:**
 
-![Output2](output.png)
+![image](https://github.com/user-attachments/assets/b2d6b30d-8dca-473c-befe-b9a3764877bf)
+
 
 **Question 3**
----
--- Paste Question 3 here
 
-```sql
--- Paste your SQL code below for Question 3
+![image](https://github.com/user-attachments/assets/6e6ad517-dc17-42e5-88c6-eecc6995b406)
+
+
+```
+
+SELECT Frequency, COUNT(PrescriptionID) AS TotalPrescriptions FROM Prescriptions GROUP BY Frequency;
+
 ```
 
 **Output:**
 
-![Output3](output.png)
+![image](https://github.com/user-attachments/assets/51aedc32-d3bf-4e4a-9ab3-8a13f3e4fec1)
+
 
 **Question 4**
----
--- Paste Question 4 here
 
-```sql
--- Paste your SQL code below for Question 4
+![image](https://github.com/user-attachments/assets/40a10f2b-4cec-447e-9324-e039829b0561)
+
+```
+
+SELECT sum(purch_amt) AS TOTAL FROM orders;
+
 ```
 
 **Output:**
 
-![Output4](output.png)
+![image](https://github.com/user-attachments/assets/845be304-3f75-40f0-8948-19146e5066ef)
+
 
 **Question 5**
----
--- Paste Question 5 here
 
-```sql
--- Paste your SQL code below for Question 5
+![image](https://github.com/user-attachments/assets/e109f46d-d4a6-42f0-89db-afa6013e3adb)
+`
+```
+
+
+SELECT COUNT(distinct salesman_id) AS COUNT FROM orders;
+
 ```
 
 **Output:**
 
-![Output5](output.png)
+![image](https://github.com/user-attachments/assets/bf181f4a-c95b-4ec5-8239-eca9075f747e)
+
 
 **Question 6**
----
--- Paste Question 6 here
 
-```sql
--- Paste your SQL code below for Question 6
+![image](https://github.com/user-attachments/assets/833d7651-02d3-4502-a0eb-4b5c8230ae65)
+
+
+```
+
+SELECT COUNT(city) AS COUNT FROM customer GROUP BY city HAVING city='Noida'; 
+
 ```
 
 **Output:**
 
-![Output6](output.png)
+![image](https://github.com/user-attachments/assets/9a939058-402c-48aa-8a66-8532dbcfbd3e)
+
 
 **Question 7**
----
--- Paste Question 7 here
 
-```sql
--- Paste your SQL code below for Question 7
+![image](https://github.com/user-attachments/assets/e21b44c1-15ae-4d31-ba0c-6544f9d9d071)
+
+```
+
+SELECT COUNT(distinct city) AS unique_cities FROM customer;
+
 ```
 
 **Output:**
 
-![Output7](output.png)
+
+
+![image](https://github.com/user-attachments/assets/0e3f97e0-5f3d-49db-b15e-fcb9068316ad)
+
+
 
 **Question 8**
----
--- Paste Question 8 here
 
-```sql
--- Paste your SQL code below for Question 8
+
+![image](https://github.com/user-attachments/assets/9d0d91cf-e9b4-499a-8667-875851d22686)
+
+```
+
+SELECT (age/5)*5 AS age_group, sum(salary) AS 'SUM(salary)' FROM customer1 GROUP BY age_group HAVING sum(salary)>5000;
+
 ```
 
 **Output:**
 
-![Output8](output.png)
+
+![image](https://github.com/user-attachments/assets/451e3c59-214e-4547-aa64-5cb8549d71be)
+
 
 **Question 9**
----
--- Paste Question 9 here
 
-```sql
--- Paste your SQL code below for Question 9
+
+![image](https://github.com/user-attachments/assets/1007510e-367c-45ef-afe4-2f4f665aa2b5)
+
 ```
+
+SELECT occupation, min(workhour) AS 'MIN(workhour)' FROM employee1 GROUP BY occupation HAVING MIN(workhour)>=8;
+
+
+```
+
 
 **Output:**
 
-![Output9](output.png)
+
+![image](https://github.com/user-attachments/assets/695d4eba-21ad-4996-81b1-b267fa017c0f)
+
 
 **Question 10**
----
--- Paste Question 10 here
 
-```sql
--- Paste your SQL code below for Question 10
+
+![image](https://github.com/user-attachments/assets/a789cded-4e53-4c1a-ba5d-5f2697bcffb0)
+
+```
+
+SELECT category_id, COUNT(product_name) AS 'count(product_name)' FROM products GROUP BY category_id HAVING min(category_id)<3;
+
 ```
 
 **Output:**
 
-![Output10](output.png)
+
+![image](https://github.com/user-attachments/assets/66291d40-90aa-47c8-a5ba-5c75978f5804)
+
 
 
 ## RESULT
