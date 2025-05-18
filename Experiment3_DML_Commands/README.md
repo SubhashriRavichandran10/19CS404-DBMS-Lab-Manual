@@ -46,124 +46,201 @@ Used to retrieve records from a table.
 SELECT column1, column2 FROM table_name WHERE condition;
 ```
 **Question 1**
---
--- Paste Question 1 here
 
-```sql
--- Paste your SQL code below for Question 1
+![image](https://github.com/user-attachments/assets/7648f9d0-cbf8-4e38-9f16-4731aa4bb30d)
+
+
+```
+UPDATE suppliers SET supplier_name='A1 Suppliers' WHERE supplier_id=8;
+
 ```
 
 **Output:**
 
-![Output1](output.png)
+![image](https://github.com/user-attachments/assets/c02763ea-5fa2-41ef-ac7b-d3bb173b5de9)
+
 
 **Question 2**
----
--- Paste Question 2 here
 
-```sql
--- Paste your SQL code below for Question 2
+
+
+![image](https://github.com/user-attachments/assets/88c04280-458f-4938-a8b8-4b1054eaa805)
+
+
 ```
+
+UPDATE customer SET grade=5 WHERE city='Chennai';
+
+```
+
 
 **Output:**
 
-![Output2](output.png)
+![image](https://github.com/user-attachments/assets/94da9d51-d849-45b6-bce2-30e60dcab19e)
+
 
 **Question 3**
----
--- Paste Question 3 here
 
-```sql
--- Paste your SQL code below for Question 3
+
+![image](https://github.com/user-attachments/assets/4d6b2a11-d307-4ed8-b02e-097401fa1499)
+
+
+
 ```
+
+UPDATE Employees SET salary=round(salary*1.25,1) WHERE department_id=40;
+UPDATE Employees SET salary=round(salary*1.15,1) WHERE department_id=90;
+UPDATE Employees SET salary=round(salary*1.1,1) WHERE department_id=110;
+
+```
+
 
 **Output:**
 
-![Output3](output.png)
+
+![image](https://github.com/user-attachments/assets/c884b319-386c-4368-8f6c-3a9b12437c7d)
+
+
+
 
 **Question 4**
----
--- Paste Question 4 here
 
-```sql
--- Paste your SQL code below for Question 4
+
+![image](https://github.com/user-attachments/assets/fd7a7a70-f7db-4224-b0ce-afd19be4b838)
+
+
+
+
+```
+
+UPDATE Suppliers SET address="58 Lakeview, Magnolia" WHERE supplier_id=5;
+
 ```
 
 **Output:**
 
-![Output4](output.png)
+
+
+![image](https://github.com/user-attachments/assets/3e863d95-02ab-41a6-8907-b499f2946210)
+
+
 
 **Question 5**
----
--- Paste Question 5 here
 
-```sql
--- Paste your SQL code below for Question 5
+
+
+![image](https://github.com/user-attachments/assets/d0ed280c-df00-4c02-bd90-5cf566ff3a5e)
+
+
 ```
+
+UPDATE products SET product_name='Premium Bread' WHERE product_id=5;
+
+
+```
+
 
 **Output:**
 
-![Output5](output.png)
+![image](https://github.com/user-attachments/assets/acc0665f-aaa8-4b4d-9623-e5cd21ad8f98)
+
+
 
 **Question 6**
----
--- Paste Question 6 here
 
-```sql
--- Paste your SQL code below for Question 6
+
+![image](https://github.com/user-attachments/assets/8a6e35d9-14cc-46bb-9aca-653defc85289)
+
 ```
+DELETE FROM Doctors WHERE doctor_id BETWEEN 2 AND 4;
+
+
+```
+
 
 **Output:**
 
-![Output6](output.png)
+
+![image](https://github.com/user-attachments/assets/4cc52f8f-bfa3-4a8e-8408-e47432f8f2a1)
+
 
 **Question 7**
----
--- Paste Question 7 here
 
-```sql
--- Paste your SQL code below for Question 7
+
+![image](https://github.com/user-attachments/assets/fe7b4750-7f0a-4417-8772-f384326b4ef6)
+
+
+
+```
+
+DELETE FROM Doctors WHERE specialization IS NULL;
+
+
 ```
 
 **Output:**
 
-![Output7](output.png)
+
+![image](https://github.com/user-attachments/assets/231ed0b4-bc72-4a9c-b93f-c31f4f36bde9)
+
+
+
+
+
 
 **Question 8**
----
--- Paste Question 8 here
 
-```sql
--- Paste your SQL code below for Question 8
+
+![image](https://github.com/user-attachments/assets/7a14d2af-0753-4543-b32d-1d119b609475)
+
+
+
+```
+
+DELETE FROM Doctors WHERE last_name IS NULL;
+
 ```
 
 **Output:**
 
-![Output8](output.png)
+![image](https://github.com/user-attachments/assets/f2cc8462-ed86-467d-81c3-9074c2541645)
+
 
 **Question 9**
----
--- Paste Question 9 here
 
-```sql
--- Paste your SQL code below for Question 9
+![image](https://github.com/user-attachments/assets/713092e5-37cc-47b9-8d9b-d254d2bb3f75)
+
+
+
+```
+
+DELETE FROM Customer WHERE (GRADE=3 OR AGENT_CODE='A008') AND OUTSTANDING_AMT<5000;
+
 ```
 
 **Output:**
 
-![Output9](output.png)
+![image](https://github.com/user-attachments/assets/59501127-663f-48bc-b381-200be2028d05)
+
 
 **Question 10**
----
--- Paste Question 10 here
 
-```sql
--- Paste your SQL code below for Question 10
+
+![image](https://github.com/user-attachments/assets/9d9bfaf9-1eec-4f99-9170-78845c965436)
+
+
+```
+
+DELETE FROM Customer WHERE GRADE<2;
+
 ```
 
 **Output:**
 
-![Output10](output.png)
+
+![image](https://github.com/user-attachments/assets/f26829d9-d131-4f8a-9bd7-7c22a11f8f09)
+
+
 
 ## RESULT
 Thus, the SQL queries to implement DML commands have been executed successfully.
